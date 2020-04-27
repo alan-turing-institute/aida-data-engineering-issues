@@ -11,6 +11,16 @@ containing that year's data.
 
 The analysis is summarized in the [broadband_analysis](https://github.com/alan-turing-institute/aida-data-engineering-issues/blob/master/Broadband_analysis.ipynb) notebook.
 
+## CleanEHR dataset
+
+The CleanEHR anonymized and public dataset can be requested online. It contains records for 1978 patients (one record each) who died at a hospital (or in some cases arrived dead), with 263 fields, including 154 longitudinal fields (time-series). These fields cover patient demographics, physiology, laboratory, and medication information for each patient/record, recorded in intensive care units across several NHS trusts in England. The full dataset, available only to selected researchers, contains 22,628 admissions from 2014 to 2016, with about 119 million data points. The dataset comes as an R data object, which can be most profitably accessed with an accompanying R package (https://cran.r-project.org/src/contrib/Archive/cleanEHR/). The R package is available at https://github.com/ropensci/cleanEHR. There is also a blog post on how to use it: https://ropensci.github.io/cleanEHR/data_clean.html. A detailed explanation of each field is found in https://github.com/ropensci/cleanEHR/wiki under Data-set-1.0 and CCHIC-Data-Fields.
+
+The analysis was performed in python and summarized in the [cleanEHR_analysis](https://github.com/alan-turing-institute/aida-data-engineering-issues/blob/master/cleanEHR_analysis.ipynb) notebook.
+
+## HES dataset
+The Household Electricity Survey 2010--2011 (Department of Energy and Climate Change 2016), a study commissioned by the UK government, collected detailed time-series measurements of the electrical energy consumption of individual appliances across around 200 households in England. The data from that study are available from the UK Data Archive (UKDA, but only on application); an overview is publicly available from the [government's website](https://www.gov.uk/government/collections/household-electricity-survey).
+
+The analysis was performed in python and summarized in the [HES_analysis](https://github.com/alan-turing-institute/aida-data-engineering-issues/blob/master/HES_analysis.ipynb) notebook.
 
 ## Tundra dataset
 This use-case comprises two separate datasets:
@@ -23,17 +33,6 @@ The analysis, performed in R, is available in the Tundra folder. In the scripts 
 2. *create_dataset.r* contains the data inntegration of the CRU data into the Tundra dataset. Further data processing operations were done previous to the model analysis.
 3. *fit-model.r* fits the selected model for the analysis.
 4. *plotting_figure.r* plots the figure included in the paper (saved in results)
-
-## CleanEHR dataset
-
-The CleanEHR anonymized and public dataset can be requested online. It contains records for 1978 patients (one record each) who died at a hospital (or in some cases arrived dead), with 263 fields, including 154 longitudinal fields (time-series). These fields cover patient demographics, physiology, laboratory, and medication information for each patient/record, recorded in intensive care units across several NHS trusts in England. The full dataset, available only to selected researchers, contains 22,628 admissions from 2014 to 2016, with about 119 million data points. The dataset comes as an R data object, which can be most profitably accessed with an accompanying R package (https://cran.r-project.org/src/contrib/Archive/cleanEHR/). The R package is available at https://github.com/ropensci/cleanEHR. There is also a blog post on how to use it: https://ropensci.github.io/cleanEHR/data_clean.html. A detailed explanation of each field is found in https://github.com/ropensci/cleanEHR/wiki under Data-set-1.0 and CCHIC-Data-Fields.
-
-The analysis was performed in python and summarized in the [cleanEHR_analysis](https://github.com/alan-turing-institute/aida-data-engineering-issues/blob/master/cleanEHR_analysis.ipynb) notebook.
-
-## HES dataset
-The Household Electricity Survey 2010--2011 (Department of Energy and Climate Change 2016), a study commissioned by the UK government, collected detailed time-series measurements of the electrical energy consumption of individual appliances across around 200 households in England. The data from that study are available from the UK Data Archive (UKDA, but only on application); an overview is publicly available from the [government's website](https://www.gov.uk/government/collections/household-electricity-survey).
-
-The analysis was performed in python and summarized in the [HES_analysis](https://github.com/alan-turing-institute/aida-data-engineering-issues/blob/master/HES_analysis.ipynb) notebook.
 
 # Contact information
 Alfredo Nazabal: anazabal@turing.ac.uk
