@@ -1,6 +1,7 @@
 # aida-data-engineering-issues
 
-This is a repository with the data wrangling challenges addressed in four case studies and summarized in this paper (link to be added).
+This is a repository with the data wrangling challenges addressed in four case studies and summarized in this paper (link to be added). This work was carried out under the [Artificial Intelligence for Data Analytics (AIDA) project](https://www.turing.ac.uk/research/research-projects/artificial-intelligence-data-analytics-aida)
+at the Alan Turing Institute (London, UK).
 
 # Case studies
 
@@ -12,7 +13,7 @@ The analysis is summarized in the [broadband_analysis](https://github.com/alan-t
 
 ## CleanEHR dataset
 
-The CleanEHR anonymized and public dataset can be requested online. It contains records for 1978 patients (one record each) who died at a hospital (or in some cases arrived dead), with 263 fields, including 154 longitudinal fields (time-series). These fields cover patient demographics, physiology, laboratory, and medication information for each patient/record, recorded in intensive care units across several NHS trusts in England. The full dataset, available only to selected researchers, contains 22,628 admissions from 2014 to 2016, with about 119 million data points. The dataset comes as an R data object, which can be most profitably accessed with an accompanying R package (https://cran.r-project.org/src/contrib/Archive/cleanEHR/). The R package is available at https://github.com/ropensci/cleanEHR. There is also a blog post on how to use it: https://ropensci.github.io/cleanEHR/data_clean.html. A detailed explanation of each field is found in https://github.com/ropensci/cleanEHR/wiki under Data-set-1.0 and CCHIC-Data-Fields.
+The CleanEHR anonymized and public dataset can be requested online. It contains records for 1978 patients (one record each) who died at a hospital (or in some cases arrived dead), with 263 fields, including 154 longitudinal fields (time-series). These fields cover patient demographics, physiology, laboratory, and medication information for each patient/record, recorded in intensive care units across several NHS trusts in England. The dataset comes as an R data object, which can be most profitably accessed with an accompanying R package (https://cran.r-project.org/src/contrib/Archive/cleanEHR/). The R package is available at https://github.com/ropensci/cleanEHR. There is also a [blog post](https://ropensci.github.io/cleanEHR/data_clean.html) on how to use it. A detailed explanation of each field is found in https://github.com/ropensci/cleanEHR/wiki under Data-set-1.0 and CCHIC-Data-Fields.
 
 The analysis was performed in python and summarized in the [cleanEHR_analysis](https://github.com/alan-turing-institute/aida-data-engineering-issues/blob/master/cleanEHR_analysis.ipynb) notebook.
 
@@ -24,12 +25,12 @@ The analysis was performed in python and summarized in the [HES_analysis](https:
 ## Tundra dataset
 This use-case comprises two separate datasets:
 * The **Tundra Traits Team database**: It contains nearly 92,000 measurements of 18 plant traits. The most frequently measured traits include plant height, leaf area, specific leaf area, leaf fresh and dry mass, leaf dry matter content, leaf nitrogen content, leaf carbon content, leaf phosphorus content, seed mass, and stem specific density. The dataset also comes
-   with a cleaning script prepared by its originators (https://github.com/ShrubHub/TraitHub). We were kindly granted early access to this dataset by Isla H. Myers-Smith and Anne Bjorkman of the sTUNDRA group (https://teamshrub.wordpress.com/research/tundra-trait-team/)
+   with a cleaning script prepared by its originators (https://github.com/ShrubHub/TraitHub). We were kindly granted early access to this dataset by Isla H. Myers-Smith and Anne Bjorkman of the [sTUNDRA group](https://teamshrub.wordpress.com/research/tundra-trait-team/)
 * The **CRU Time Series** temperature data and rainfall data: These are global datasets, gridded to 0.5º. We use only the date range 1950 to 2016. http://catalogue.ceda.ac.uk/uuid/58a8802721c94c66ae45c3baa4d814d0
 
 The analysis, performed in R, is available in the Tundra folder. In the scripts folder there are 4 different files:
 1. Use the *TTT_data_cleaning_script.r* to clean the dataset. After using it, we end up in the clean version of the Tundra data provided in (https://github.com/ShrubHub/TraitHub), before integrating the CRU data.
-2. *create_dataset.r* contains the data inntegration of the CRU data into the Tundra dataset. Further data processing operations were done previous to the model analysis.
+2. *create_dataset.r* contains the data integration of the CRU data into the Tundra dataset. Further data processing operations were done previous to the model analysis.
 3. *fit-model.r* fits the selected model for the analysis.
 4. *plotting_figure.r* plots the figure included in the paper (saved in results)
 
