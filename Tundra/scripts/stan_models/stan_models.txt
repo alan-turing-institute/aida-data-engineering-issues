@@ -1,0 +1,50 @@
+stancodeH1 <- 'data {
+  real<lower=0> n; // number of observations
+  vector[n] y; // observations
+  real mu0;
+  real<lower=0> tau20;
+  real<lower=0> alpha;
+  real<lower=0> beta;
+  real<lower=0> sigma2;
+}
+parameters {
+  real mu;
+  real<lower=0> tau2; // group-level variance
+  vector[n] theta; // participant effects
+}
+model {
+  target += normal_lpdf(mu | mu0, sqrt(tau20));
+  target += inv_gamma_lpdf(tau2 | alpha, beta);
+  target += normal_lpdf(theta | mu, sqrt(tau2));
+  target += normal_lpdf(y | theta, sqrt(sigma2));
+}
+'
+
+stancode_fig2b <- 'data {
+  int<lower=0> n; // number of observations
+  vector[n] y; // observations
+  vector[n] tmp; // temperature or precipitation
+  real A;
+  real B;
+  real<lower=0> sigma_s;
+  real<lower=0> sigma_1;
+  real<lower=0> sigma_2;
+  real<lower=0> sigma_3;
+}
+parameters {
+  real alpha_sd;
+  real alpha_s;
+  real beta_s;
+}
+transformed parameters {
+  vector[n] alpha_obs; // observations effects
+  for (j in 1:n)
+    alpha_obs[j] = alpha_s + beta_s * tmp[j];
+}
+model {
+  target += normal_lpdf(alpha_s | A, sqrt(sigma_3));
+  target += normal_lpdf(beta_s | B, sqrt(sigma_2));
+  target += normal_lpdf(alpha_sd | alpha_obs, sqrt(sigma_1));
+  target += lognormal_lpdf(y | alpha_sd, sqrt(sigma_s));
+}
+'
