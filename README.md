@@ -6,8 +6,7 @@ This is a repository with the data wrangling challenges addressed in four case s
 
 ## Broadband dataset
 The UK’s Office of Communications (Ofcom) conducts an annual survey of the
-performance of residential fixed-line broadband services https://www.ofcom.org.uk/research-and-data/telecoms-research/broadband-research/broadband-speeds. These data are published as a table in annual instalments: a new spreadsheet each year
-containing that year's data.
+performance of residential fixed-line broadband services https://www.ofcom.org.uk/research-and-data/telecoms-research/broadband-research/broadband-speeds. These data are published as a table in annual instalments: a new spreadsheet each year containing that year's data.
 
 The analysis is summarized in the [broadband_analysis](https://github.com/alan-turing-institute/aida-data-engineering-issues/blob/master/Broadband_analysis.ipynb) notebook.
 
@@ -26,7 +25,7 @@ The analysis was performed in python and summarized in the [HES_analysis](https:
 This use-case comprises two separate datasets:
 * The **Tundra Traits Team database**: It contains nearly 92,000 measurements of 18 plant traits. The most frequently measured traits include plant height, leaf area, specific leaf area, leaf fresh and dry mass, leaf dry matter content, leaf nitrogen content, leaf carbon content, leaf phosphorus content, seed mass, and stem specific density. The dataset also comes
    with a cleaning script prepared by its originators (https://github.com/ShrubHub/TraitHub). We were kindly granted early access to this dataset by Isla H. Myers-Smith and Anne Bjorkman of the sTUNDRA group (https://teamshrub.wordpress.com/research/tundra-trait-team/)
-* The **CRU Time Series** temperature data and rainfall data: These are global datasets, gridded to $0.5º$. We use only the date range 1950 to 2016. http://catalogue.ceda.ac.uk/uuid/58a8802721c94c66ae45c3baa4d814d0
+* The **CRU Time Series** temperature data and rainfall data: These are global datasets, gridded to 0.5º. We use only the date range 1950 to 2016. http://catalogue.ceda.ac.uk/uuid/58a8802721c94c66ae45c3baa4d814d0
 
 The analysis, performed in R, is available in the Tundra folder. In the scripts folder there are 4 different files:
 1. Use the *TTT_data_cleaning_script.r* to clean the dataset. After using it, we end up in the clean version of the Tundra data provided in (https://github.com/ShrubHub/TraitHub), before integrating the CRU data.
