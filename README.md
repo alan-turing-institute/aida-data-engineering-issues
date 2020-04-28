@@ -1,6 +1,6 @@
 # aida-data-engineering-issues
 
-This is a repository with the data wrangling challenges addressed in four case studies and summarized in this paper (link to be added). This work was carried out under the [Artificial Intelligence for Data Analytics (AIDA) project](https://www.turing.ac.uk/research/research-projects/artificial-intelligence-data-analytics-aida)
+This is a repository with the data wrangling challenges addressed in four case studies and summarized the paper [**Data Engineering for Data Analytics: A Classification of the Issues, and Case Studies**](https://arxiv.org/pdf/2004.12929.pdf). This work was carried out under the [Artificial Intelligence for Data Analytics (AIDA) project](https://www.turing.ac.uk/research/research-projects/artificial-intelligence-data-analytics-aida)
 at the Alan Turing Institute (London, UK).
 
 # Case studies
